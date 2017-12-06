@@ -112,7 +112,7 @@ public class ShortestSequenceTest {
 		List<Integer> result = new ArrayList<Integer>();
 		result = shortestSequence.calculate(tags03, availableTags03);
 		assertEquals(validResult03, result);
-	}	
+	}
 	
 	@Test
 	public void testCase04() {

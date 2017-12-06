@@ -7,12 +7,8 @@ import java.util.List;
 public class ShortestSequence {
 
 	public List<Integer> calculate(List<String> tags, List<String> availableTags) {
-
-		List<List<Integer>> sequences = new ArrayList<List<Integer>>();
-		sequences = findSequences(tags, availableTags);
-		sequences = buildCartesianProduct(sequences);
+		List<List<Integer>> sequences = buildCartesianProduct(findSequences(tags, availableTags));
 		return findShortestPath(sequences);
-
 	}
 
 	private List<List<Integer>> findSequences(List<String> tags, List<String> availableTags) {
